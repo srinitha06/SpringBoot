@@ -14,7 +14,12 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext( "resources.xml");
         Student s =(Student) context.getBean("st");
         s.intershipProgram();
-
+        ApplicationContext teacher = new ClassPathXmlApplicationContext( "resources.xml");
+        Teacher t =(Teacher) teacher.getBean("te");
+        t.Notes();
+        ApplicationContext assesment = new ClassPathXmlApplicationContext( "resources.xml");
+        Assesment a=(Assesment) assesment.getBean("as");
+        a.Score();
         System.out.println( "Hello World!" );
 
     }
